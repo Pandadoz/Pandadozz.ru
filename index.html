@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PANDA | Главная</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0f1f;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(90deg, #0ff, #08f);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #000;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px #fff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    nav a:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #0ff;
+    }
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      text-align: center;
+    }
+    .hero-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .hero-images img {
+      max-height: 280px; /* Увеличенные картинки */
+      flex: 1 1 auto;
+      transition: transform 0.3s ease;
+    }
+    .hero-images img:hover {
+      transform: scale(1.15);
+    }
+    .hero-title {
+      font-size: 38px;
+      color: #0ff;
+      font-weight: bold;
+      text-shadow: 0 0 12px #08f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PANDA</h1>
+    <nav>
+      <a href="about.html">О компании</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+  <section class="hero-section">
+    <div class="hero-images">
+      <img src="img/2.png" alt="Изображение 2">
+      <img src="img/1.png" alt="Изображение 1">
+      <img src="img/3.png" alt="Изображение 3">
+    </div>
+    <div class="hero-title">Дозаторы и диспенсер для гигиены</div>
+  </section>
+</body>
+</html>

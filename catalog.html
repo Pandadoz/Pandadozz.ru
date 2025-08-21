@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PANDA | Каталог</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0f1f;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(90deg, #0ff, #08f);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #000;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px #fff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    nav a:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #0ff;
+    }
+    .catalog {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px;
+    }
+    .card {
+      background: linear-gradient(135deg, #0ff2, #08f5);
+      padding: 30px;
+      border-radius: 16px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.8);
+    }
+    .card h3 {
+      color: #0ff;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: linear-gradient(90deg,#0ff,#08f);
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .card a:hover {
+      background: linear-gradient(90deg,#08f,#0ff);
+      box-shadow: 0 0 10px #0ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Каталог</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+  <section class="catalog">
+    <div class="card">
+      <h2>Дозатор сенсорный</h2>
+      <a href="product1.html">Подробнее</a>
+    </div>
+    <div class="card">
+      <h2>Дозатор локтевой</h2>
+      <a href="product2.html">Подробнее</a>
+    </div>
+    <div class="card">
+      <h2>Дозатор нажимной</h2>
+      <a href="product6.html">Подробнее</a>
+    </div>
+    <div class="card">
+      <h2>Диспенсер бумажных полотенец</h2>
+      <a href="product3.html">Подробнее</a>
+    </div>
+  
+    <div class="card">
+  <h2>Диспенсер для туалетной бумаги</h2>
+  <a href="product4.html">Подробнее</a>
+</div>
+    <div class="card">
+  <h2>Аксессуары для диспенсеров и дозаторов</h2>
+  <a href="product5.html">Подробнее</a>
+</div>
+
+</section>
+</body>
+</html>

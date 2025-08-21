@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PANDA | Диспенсер для бумажных полотенец</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #0a0f1f; color: #fff; }
+    header { background: linear-gradient(90deg, #0ff, #08f); padding: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+    header h1 { margin: 0; font-size: 32px; color: #000; letter-spacing: 2px; text-transform: uppercase; text-shadow: 1px 1px 2px #fff; }
+    nav { display: flex; justify-content: center; gap: 20px; margin-top: 10px; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; padding: 10px 20px; border-radius: 8px; transition: all 0.3s ease; background: rgba(255, 255, 255, 0.1); }
+    nav a:hover { background: #fff; color: #000; transform: scale(1.1); box-shadow: 0 0 10px #0ff; }
+
+    .products { display: flex; flex-direction: column; gap: 40px; padding: 40px; max-width: 1100px; margin: auto; }
+    .card { background: linear-gradient(135deg, #0ff2, #08f5); border-radius: 16px; padding: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+    .card h2 {
+      font-size: 22px; margin-bottom: 20px; text-align: center;
+      background: linear-gradient(90deg, #0ff, #08f);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 8px rgba(0, 255, 255, 0.6); letter-spacing: 1px;
+    }
+    .images { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .images img { max-height: 220px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); transition: transform 0.25s ease; cursor: zoom-in; background:#fff; }
+    .images img:hover { transform: translateY(-3px) scale(1.03); }
+    .description { text-align: left; line-height: 1.6; font-size: 16px; }
+
+    /* Лайтбокс */
+    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+      display: none; align-items: center; justify-content: center; z-index: 9999; }
+    .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.8); cursor: zoom-out; }
+    .lightbox.open { display: flex; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Диспенсер для бумажных полотенец</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <div class="card">
+      <h2>Диспенсер для салфеток - нержавеющая сталь</h2>
+      <div class="images">
+        <img src="img/disp1.png" alt="disp1">
+        <img src="img/disp2.png" alt="disp2">
+      </div>
+      <div class="description">
+        <p><b>Материал корпуса:</b> Нержавеющая сталь</p>
+        <p><b>Цвет:</b> Металл</p>
+        <p><b>Объем:</b> до 750 салфеток</p>
+        <p><b>Сложение салфеток:</b> М/С</p>
+        <p><b>Размер:</b> (В)365 мм/(Ш)282 мм/(Г)102 мм</p>
+        <p><b>Замок:</b> Наличие</p>
+        <p><b>Вид крепления:</b> Настенный</p>
+        <p><b>Крепежные элементы:</b> Наличие</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Лайтбокс -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" alt="Просмотр изображения">
+  </div>
+
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target.tagName === 'IMG' && target.closest('.images')) {
+        lbImg.src = target.src;
+        lb.classList.add('open');
+      }
+      if (target === lb || target === lbImg) {
+        lb.classList.remove('open');
+        lbImg.src = '';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lb.classList.remove('open');
+        lbImg.src = '';
+      }
+    });
+  </script>
+</body>
+</html>

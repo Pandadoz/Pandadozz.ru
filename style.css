@@ -1,0 +1,99 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0f1f;
+  color: #fff;
+}
+
+header {
+  background: linear-gradient(90deg, #0ff, #08f);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #0ff;
+}
+
+/* Карточки каталога */
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: linear-gradient(135deg, #0ff2, #08f5);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.8);
+}
+
+/* Заголовки карточек (и старых, и новых) */
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #0ff, #08f);
+  color: #add8e6;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0ff, #08f);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.card a:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 12px #0ff;
+}
