@@ -49,7 +49,7 @@ nav a:hover {
 /* Карточки каталога */
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   padding: 40px;
   max-width: 1200px;
@@ -70,7 +70,7 @@ nav a:hover {
   box-shadow: 0 12px 25px rgba(0,0,0,0.8);
 }
 
-/* Заголовки карточек (и старых, и новых) */
+/* Заголовки карточек */
 .card h2 {
   font-size: 22px;
   margin-bottom: 20px;
@@ -96,4 +96,14 @@ nav a:hover {
   background: #fff;
   color: #000;
   box-shadow: 0 0 12px #0ff;
+}
+
+/* Стили для картинок внутри карточек */
+.card img {
+  width: 100%;           /* картинка растягивается по ширине карточки */
+  height: 200px;         /* фиксированная высота */
+  object-fit: cover;     /* обрезка без искажения пропорций */
+  border-radius: 12px;   /* закругление углов */
+  margin-bottom: 15px;   /* отступ снизу перед заголовком */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* легкая тень */
 }
